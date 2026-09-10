@@ -2,5 +2,9 @@
   "name": "bd-problems-daily",
   "version": "1.0.0",
   "description": "Daily Bangladesh problem broadcast via Telegram",
-  "main": "script.js"
+  "main": "script.js",
+  "scripts": {
+    "start": "node script.js"
+  },
+  "license": "MIT"
 }
