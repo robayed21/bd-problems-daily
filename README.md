@@ -48,4 +48,4 @@
 |---|---|
 | `script.js` | আজকের সমস্যা খুঁজে Telegram-এ পাঠায় |
 | `problems.json` | তারিখভিত্তিক সমস্যার ডেটা |
-| `daily.yml` | GitHub Actions ওয়ার্কফ্লো (প্রতিদিন সকাল ৬টা, ঢাকা) |
+| `.github/workflows/daily.yml` | GitHub Actions ওয়ার্কফ্লো (প্রতিদিন সকাল ৬টা, ঢাকা) |
