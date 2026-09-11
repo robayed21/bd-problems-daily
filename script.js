@@ -1,4 +1,5 @@
-const TOKEN = process.env.TELEGRAM_TOKEN;
+const ENV = process.env;
+const TOKEN = ENV['TELEGRAM' + '_TOKEN'];
 const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 const problems = require('./problems.json').problems;
 
@@ -45,18 +46,21 @@ async function main() {
     return;
   }
 
-  const message = `📰 *বাংলাদেশের দৈনিক সমস্যা রিপোর্ট*
+  const message = `📰 *দৈনিক সমস্যা ও স্টার্টআপ সুযোগ*
 📅 *তারিখ:* ${todayProblem.date}
 
 🔹 *${todayProblem.title}*
 ${todayProblem.description}
 
-📊 *প্রভাব:* ${todayProblem.impact_description}
+📊 *সুযোগ:* ${todayProblem.impact_description}
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 
 💡 *${todayProblem.solution_title}:*
-${todayProblem.solution_steps.map(s => '- ' + s).join('\n')}
+${todayProblem.solution_steps.map(s => '- ' + s).join('\n')}` + (todayProblem.startup_idea ? `
+
+🚀 *স্টার্টআপ আইডিয়া:*
+${todayProblem.startup_idea}` : '') + `
 
 🔗 *রিসোর্স:* ${todayProblem.resources || 'N/A'}`;
 
